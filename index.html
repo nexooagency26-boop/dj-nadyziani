@@ -232,7 +232,10 @@ body{top:0!important}
 
 /* animated grid lines */
 .hero-grid{
-  position:absolute;inset:0;z-index:1;
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
   background-image:
     linear-gradient(rgba(201,169,110,0.025) 1px,transparent 1px),
     linear-gradient(90deg,rgba(201,169,110,0.025) 1px,transparent 1px);
@@ -241,7 +244,8 @@ body{top:0!important}
 }
 
 .hero-content{
-  position:relative;z-index:2;
+  position:relative;
+  z-index:5;
   display:flex;flex-direction:column;align-items:center;
   text-align:center;gap:28px;
   opacity:1;animation:heroFadeIn 1.2s ease forwards 4s;
@@ -1405,6 +1409,22 @@ function triggerGTrans(lang){
   location.reload();
 }
 </script>
+<audio id="bg-audio" autoplay loop muted playsinline>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
 
+<script>
+  const audio = document.getElementById("bg-audio");
+
+  audio.play().catch(() => {});
+
+  const enableSound = () => {
+    audio.muted = false;
+    audio.play();
+  };
+
+  document.addEventListener("touchstart", enableSound, { once: true });
+  document.addEventListener("click", enableSound, { once: true });
+</script>
 </body>
 </html>
