@@ -445,13 +445,13 @@ body{top:0!important}
 }
 .marquee-track{
   display:flex;gap:0;
-  animation:marqueeScroll 22s linear infinite;
+  animation:marqueeScroll 17s linear infinite;
   white-space:nowrap;
 }
 .marquee-track:hover{animation-play-state:paused}
-@keyframes marqueeScroll{
-  from{transform:translateX(0)}
-  to{transform:translateX(-50%)}
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 .marquee-item{
   display:inline-flex;align-items:center;gap:24px;
