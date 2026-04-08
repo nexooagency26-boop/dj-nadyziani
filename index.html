@@ -777,8 +777,19 @@ footer{
 <!-- GRAIN -->
 <div id="grain"></div>
 
-<!-- MODIF 9: Son en fond -->
-<audio id="bg-audio" src="music.mp3" loop preload="auto" playsinline></audio>
+<!-- Son en fond -->
+<audio id="bg-audio" autoplay loop muted playsinline>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const audio = document.getElementById("bg-audio");
+
+  document.addEventListener("click", function () {
+    audio.muted = false;
+    audio.play();
+  }, { once: true });
+</script>
 
 <!-- MODIF 8: Google Translate -->
 <div id="google_translate_element"></div>
