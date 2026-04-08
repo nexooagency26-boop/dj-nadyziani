@@ -244,7 +244,7 @@ body{top:0!important}
   position:relative;z-index:2;
   display:flex;flex-direction:column;align-items:center;
   text-align:center;gap:28px;
-  opacity:0;animation:heroFadeIn 1.2s ease forwards 4s;
+  opacity:1;animation:heroFadeIn 1.2s ease forwards 4s;
 }
 @keyframes heroFadeIn{to{opacity:1}}
 
@@ -863,6 +863,19 @@ footer{
       <div class="hero-divider-dot"></div>
       <div class="hero-divider-line"></div>
     </div>
+    <div class="hero-socials">
+  <a href="https://www.instagram.com/dj_nadyziani/" target="_blank" class="hero-social-btn btn-ig">
+    Instagram
+  </a>
+
+  <a href="https://www.facebook.com/people/Dj-Nady-Ziani/100063458079592/" target="_blank" class="hero-social-btn btn-fb">
+    Facebook
+  </a>
+
+  <a href="https://wa.me/447903240776" target="_blank" class="hero-social-btn btn-wa">
+    WhatsApp
+  </a>
+</div>
 
     <div class="hero-cities">
       <span class="hero-city-tag">London</span>
@@ -912,11 +925,11 @@ footer{
       <!-- MODIF 4: Statistiques modifiées -->
       <div class="about-stats reveal reveal-delay-1">
         <div class="stat-box">
-          <div class="stat-num">15+</div>
+          <div class="stat-num">20+</div>
           <div class="stat-label">Années d'expérience</div>
         </div>
         <div class="stat-box">
-          <div class="stat-num">40+</div>
+          <div class="stat-num">15+</div>
           <div class="stat-label">Pays couverts</div>
         </div>
         <div class="stat-box">
@@ -940,7 +953,7 @@ footer{
       <div class="about-tags">
         <span class="tag">Deep House</span>
         <span class="tag">Afro House</span>
-        <span class="tag">Nu Disco</span>
+        <span class="tag">House</span>
         <span class="tag">Melodic Techno</span>
         <span class="tag">Organic</span>
       </div>
@@ -1040,7 +1053,10 @@ footer{
       <div class="section-label">Booking</div>
       <h2 class="section-title">RÉSERVEZ<br><span class="gold-word">UNE DATE</span></h2>
       <!-- MODIF 6: email remplacé -->
-      <a href="/cdn-cgi/l/email-protection#8be0eaefeef9a5f1e2eae5e2a5fee0cbece6eae2e7a5e8e4e6" class="contact-email"><span class="__cf_email__" data-cfemail="ee858f8a8b9cc094878f8087c09b85ae89838f8782c08d8183">[email&#160;protected]</span></a>
+      <a href="mailto:kader.ziani.uk@gmail.com" class="contact-email">
+  kader.ziani.uk@gmail.com
+</a>
+
       <p class="about-text" style="margin-top:24px">
         Pour toute demande de réservation, événement privé ou résidence internationale, contactez-nous directement. Réponse sous 24h.
       </p>
@@ -1329,6 +1345,17 @@ window.addEventListener('load', function initMap(){
     { name:'St Tropez', lat:43.2727,  lng:6.6407   },
     { name:'Bali',      lat:-8.4095,  lng:115.1889 },
     { name:'Bangkok',   lat:13.7563,  lng:100.5018 },
+    { name:'Ibiza',     lat:38.9067,  lng:1.4206   },
+    { name:'Dubai',     lat:25.2048,  lng:55.2708  },
+    { name:'Abidjan',   lat:5.3600,   lng:-4.0083  },
+    { name:'Ushuaïa',   lat:38.8850,  lng:1.4050   },
+    { name:'Marrakech', lat:31.6295,  lng:-7.9811  },
+
+
+
+
+
+    
   ];
 
   cities.forEach(c=>{
