@@ -257,6 +257,14 @@ body{top:0!important}
   width:min(720px,82vw);
   filter:drop-shadow(0 0 100px rgba(201,169,110,0.35)) drop-shadow(0 0 30px rgba(201,169,110,0.2));
 }
+
+.logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: rotateLogo 5s linear infinite;
+}
+}
 .hero-tagline{
   font-family:var(--font-sig);
   font-size:clamp(20px,3.5vw,34px);
@@ -770,6 +778,15 @@ footer{
   .hero-logo{width:min(540px,90vw)}
   #intro-logo{width:min(600px,92vw)}
 }
+@keyframes rotateLogo {
+  from {
+    transform: rotateY(0deg);
+  }
+  to {
+    transform: rotateY(360deg);
+  }
+}
+}
 </style>
 </head>
 <body>
@@ -812,7 +829,7 @@ footer{
      INTRO
 ============================================================ -->
 <div id="intro">
-  <img id="intro-logo" src="https://res.cloudinary.com/dkm8cbylh/image/upload/v1775640843/logoziani_kv2hpo.png" alt="DJ Logo">
+  <img id="intro-logo" src="logo.png" alt="logo">
   <div class="intro-line"></div>
   <p class="intro-city">LONDON</p>
   <p class="intro-city">ST TROPEZ</p>
@@ -835,7 +852,7 @@ footer{
 ============================================================ -->
 <nav id="navbar">
   <div class="nav-logo">
-    <a href="#hero"><img src="https://res.cloudinary.com/dkm8cbylh/image/upload/v1775640843/logoziani_kv2hpo.png" alt="Logo"></a>
+    <a href="#hero"><img src="logo.png" alt="Logo"></a>
   </div>
   <div class="nav-links">
     <a href="#about">About</a>
@@ -869,7 +886,9 @@ footer{
 
   <div class="hero-content">
     <!-- MODIF 1: logo hero agrandi -->
-    <img class="hero-logo" src="https://res.cloudinary.com/dkm8cbylh/image/upload/v1775640843/logoziani_kv2hpo.png" alt="DJ Logo">
+    <div class="logo-container">
+  <img class="hero-logo" src="logo.png" alt="logo">
+</div>
 
     <p class="hero-tagline">Where music becomes a ritual</p>
 
@@ -1099,7 +1118,7 @@ footer{
 ============================================================ -->
 <footer>
   <div class="footer-logo">
-    <img src="https://res.cloudinary.com/dkm8cbylh/image/upload/v1775640843/logoziani_kv2hpo.png" alt="Logo">
+    <img src="logo.png" alt="logo">
   </div>
   <p class="footer-copy">© 2025 — DJ London · All rights reserved</p>
   <!-- MODIF 7: SoundCloud/Mixcloud supprimés, FB/SC/WA ajoutés -->
